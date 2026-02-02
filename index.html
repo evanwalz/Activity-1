@@ -1,1 +1,24 @@
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+    <title> Click Counter</title>
+</head>
+
+<body>
+    <h1>Click Counter</h1>
+
+
+    <p>You clicked: <span id="count">0</span> times</p>
+
+    <button onclick="increaseCount()">Click Me</button>
+    <script>
+        let count = 0;
+
+        function increaseCount() {
+            count++;
+            document.getElementById("count").textContent = count;
+        }
+    </script>
+</body>
+</html>
