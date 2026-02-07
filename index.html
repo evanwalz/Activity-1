@@ -48,6 +48,7 @@
 
     <button onclick="increaseCount()">Click Me</button>
     <button onclick="resetCount()">Reset</button>
+    
     <audio id="clickSound" src="click.mp3"></audio>
 
     <script>
@@ -86,8 +87,8 @@
 
         function resetCount() {
             count = 0;
-            localStorage.setItem("count", count);
-            document.getElementById("count").textContent = count;
+            counter.textContent = count;
+            message.textContent = "";
         }
     </script>
 </body>
