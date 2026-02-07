@@ -48,11 +48,11 @@
 
     <button onclick="increaseCount()">Click Me</button>
     <button onclick="resetCount()">Reset</button>
-    
+
     <audio id="clickSound" src="click.mp3"></audio>
 
     <script>
-        let count = localStorage.getItem("count") || 0;
+        let count = Number(localStorage.getItem("count")) || 0;
 
         const counter = document.getElementById("count");
         const message = document.getElementById("message");
@@ -73,13 +73,13 @@
             sound.currentTime = 0;
             sound.play();
 
-            if (count === 5) {
+            if (count >= 5 && count < 20) {
                 document.getElementById("message").textContent = "5 Clicks!";
             }
-            if (count === 20) {
+            if (count >= 20 && count < 50) {
                 document.getElementById("message").textContent = "20 Click Master!";
             }
-            if (count === 50) {
+            if (count >= 50) {
                 docunment.getElementById("message").textContent = " 50 Click legend!"
             }
             
