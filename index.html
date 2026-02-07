@@ -69,10 +69,6 @@
             sound.currentTime = 0;
             sound.play();
 
-            let sound = document.getElementById("clickSound");
-            sound.currentTime = 0;
-            sound.play();
-
             if (count >= 5 && count < 20) {
                 document.getElementById("message").textContent = "5 Clicks!";
             }
@@ -82,11 +78,15 @@
             if (count >= 50) {
                 docunment.getElementById("message").textContent = " 50 Click legend!"
             }
+            else {
+                message.textContent = "";
+            }
             
         }
 
         function resetCount() {
             count = 0;
+            localStorage.setItem("count", count);
             counter.textContent = count;
             message.textContent = "";
         }
